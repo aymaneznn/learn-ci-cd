@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: "sudo npm install -g npm@latest"
+          command: "npm install -g npm@latest"
       - run:
           name: Run db-install
           command: "npm run db-install"
