@@ -30,7 +30,7 @@ jobs:
           working_directory: ./frontend
           command: "npm run lint-check"
       - run:
-          working_directory: /frontend
+          working_directory: ./frontend
           command: "npm run type-check"
       - run:
           working_directory: ./frontend
