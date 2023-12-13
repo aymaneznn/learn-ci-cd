@@ -6,7 +6,6 @@ jobs:
       - image: node:lts
     
     steps:
-    working_directory: ~/backend
       - run: 
           command: "npm install"
       - run:
