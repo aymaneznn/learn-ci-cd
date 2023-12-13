@@ -4,31 +4,36 @@ jobs:
   build_and_tests_back:
     docker:
       - image: node:lts
-    working_directory: ~/backend
     steps:
       - checkout
       - run: npm i
       - run:
+          working_directory: ~/backend
           command: "npm run db-install"
       - run:
+          working_directory: ~/backend
           command: "npm run lint-check"
       - run:
+          working_directory: ~/backend
           command: "npm run type-check"
       - run:
+          working_directory: ~/backend
           command: "npm run unit-tests"
 
   build_and_tests_front:
     docker:
       - image: node:lts
-    working_directory: ~/frontend
     steps:
       - checkout
       - run: npm i
       - run:
+          working_directory: ~/frontend
           command: "npm run lint-check"
       - run:
+          working_directory: ~/frontend
           command: "npm run type-check"
       - run:
+          working_directory: ~/frontend
           command: "npm run unit-tests"
 
 workflows:
