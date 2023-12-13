@@ -11,14 +11,13 @@ jobs:
       - run: npm run type-check
       - run: npm run unit-tests
 
-jobs:
   build_and_tests_front:
     docker:
       - image: cimg/node:21.4.0
     working_directory: ../frontend
     steps:
       - checkout
-      - run : npm i
+      - run: npm i
       - run: npm run lint-check
       - run: npm run type-check
       - run: npm run unit-tests
