@@ -10,6 +10,7 @@ jobs:
           name: Install dependencies
           command: "npm install"
       - run:
+          working_directory: backend
           name: Run db-install
           command: "npm run db-install"
       - run:
