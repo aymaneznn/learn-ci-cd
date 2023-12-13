@@ -1,4 +1,5 @@
-version: 1.0
+version: 2.0
+
 jobs:
   build_and_tests_back:
     docker:
@@ -24,7 +25,8 @@ jobs:
       - run: npm run unit-tests
 
 workflows:
-  build_and_test-back:
+  version: 2.0
+  build:
     jobs:
       - build_and_tests_back
       - build_and_tests_front
