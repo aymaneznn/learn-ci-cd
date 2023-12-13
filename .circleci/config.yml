@@ -3,26 +3,33 @@ version: 2.1
 jobs:
   build_and_tests_back:
     docker:
-      - image: node:21.4.0
+      - image: node:lts
     working_directory: ~/backend
     steps:
       - checkout
       - run: npm i
-      - run: npm run db-install
-      - run: npm run lint-check
-      - run: npm run type-check
-      - run: npm run unit-tests
+      - run: 
+        command: "npm run db-install"
+      - run: 
+        command: "npm run lint-check"
+      - run: 
+        command: "npm run type-check"
+      - run: 
+        command: "npm run unit-tests"
 
   build_and_tests_front:
     docker:
-      - image: node:21.4.0
+      - image: node:lts
     working_directory: ~/frontend
     steps:
       - checkout
       - run: npm i
-      - run: npm run lint-check
-      - run: npm run type-check
-      - run: npm run unit-tests
+      - run: 
+        command: "npm run lint-check"
+      - run: 
+        command: "npm run type-check"
+      - run: 
+        command: "npm run unit-tests"
 
 workflows:
   build:
