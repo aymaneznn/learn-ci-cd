@@ -1,0 +1,20 @@
+version: 2.1
+
+jobs:
+  build_and_tests_back:
+    docker:
+      - image: node:lts
+    working_directory: ~/backend
+    steps:
+      - checkout
+      - run: 
+          command: "npm install"
+      - run:
+          command: "npm run db-install"
+      - run:
+          command: "npm run lint-check"
+
+workflows:
+  build:
+    jobs:
+      - build_and_tests_back
