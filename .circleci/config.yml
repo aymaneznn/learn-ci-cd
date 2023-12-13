@@ -8,14 +8,14 @@ jobs:
     steps:
       - checkout
       - run: npm i
-      - run: 
-        command: "npm run db-install"
-      - run: 
-        command: "npm run lint-check"
-      - run: 
-        command: "npm run type-check"
-      - run: 
-        command: "npm run unit-tests"
+      - run:
+          command: "npm run db-install"
+      - run:
+          command: "npm run lint-check"
+      - run:
+          command: "npm run type-check"
+      - run:
+          command: "npm run unit-tests"
 
   build_and_tests_front:
     docker:
@@ -24,12 +24,12 @@ jobs:
     steps:
       - checkout
       - run: npm i
-      - run: 
-        command: "npm run lint-check"
-      - run: 
-        command: "npm run type-check"
-      - run: 
-        command: "npm run unit-tests"
+      - run:
+          command: "npm run lint-check"
+      - run:
+          command: "npm run type-check"
+      - run:
+          command: "npm run unit-tests"
 
 workflows:
   build:
