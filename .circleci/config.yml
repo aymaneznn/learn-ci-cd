@@ -4,9 +4,9 @@ jobs:
   build_and_tests_back:
     docker:
       - image: node:lts
-    working_directory: ~/backend
+    
     steps:
-      - checkout
+    working_directory: ~/backend
       - run: 
           command: "npm install"
       - run:
