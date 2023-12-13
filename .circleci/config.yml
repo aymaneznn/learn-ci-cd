@@ -8,16 +8,16 @@ jobs:
       - checkout
       - run: npm i
       - run:
-          working_directory: ~/backend
+          working_directory: ./backend
           command: "npm run db-install"
       - run:
-          working_directory: ~/backend
+          working_directory: ./backend
           command: "npm run lint-check"
       - run:
-          working_directory: ~/backend
+          working_directory: ./backend
           command: "npm run type-check"
       - run:
-          working_directory: ~/backend
+          working_directory: ./backend
           command: "npm run unit-tests"
 
   build_and_tests_front:
@@ -27,13 +27,13 @@ jobs:
       - checkout
       - run: npm i
       - run:
-          working_directory: ~/frontend
+          working_directory: ./frontend
           command: "npm run lint-check"
       - run:
-          working_directory: ~/frontend
+          working_directory: /frontend
           command: "npm run type-check"
       - run:
-          working_directory: ~/frontend
+          working_directory: ./frontend
           command: "npm run unit-tests"
 
 workflows:
