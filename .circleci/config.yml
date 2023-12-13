@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build_and_tests_back:
     docker:
-      - image: node:lts
+      - image: node:21.4.0
     working_directory: ~/backend
     steps:
       - checkout
@@ -15,7 +15,7 @@ jobs:
 
   build_and_tests_front:
     docker:
-      - image: node:lts
+      - image: node:21.4.0
     working_directory: ~/frontend
     steps:
       - checkout
